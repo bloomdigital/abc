@@ -1,0 +1,754 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Askham Bryan College</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" href="https://use.typekit.net/vgo2vjg.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@0;1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+	<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js" crossorigin="anonymous"></script>
+	<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+<!--DEV Note
+    Optional banner colour - 'theme-fe' or 'theme-he' only - this should be independent from selecting the theme of the page
+    ...for example not all he pages have a coloured banner
+
+    IMPORTANT - if pages is HE switch logo - have used basic panini handlebars to show this
+    
+    ADDITIONAL JS FOR XLARGE SCREENS TO FIX ACCESSIBILITY ISSUES -
+    #secondary-menu buttons and anchors need aria-expanded attributes removed 
+    #secondary-menu .submenu needs aria-hidden attribute removed
+    #secondary-menu .submenu buttons need to be switched to anchors
+    BUG - need to close submenus when using multiple clicky-menu's
+-->
+
+<header class="banner ">
+    <div class="skip-link">
+        <div class="skip-link__container">
+            <a href="#content" class="skip-link__link">Skip to main content</a>
+        </div>
+    </div>
+
+    <div class="alert-banner bg-invert" data-closable>
+        <div class="alert-banner__inner p-rel">
+            <div class="alert-banner__text">
+                <p><strong>COVID 19 Update</strong> - Please see our Coronavirus (COVID-19) updates page for the latest information and advice. <a href="#">Read more</a></p>
+            </div>
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#close"></use></svg>
+            </button>
+        </div>
+    </div>
+    <div class="banner__content">
+        
+        <a href="index.html" class="logo">
+            
+            <svg><use xlink:href="assets/img/sprite.svg#logo"></use></svg>
+            <span class="show-for-sr">Go to homepage</span>
+        </a>
+
+        <button class="button-hamburger" id="primary-menu-toggle" aria-expanded="false" aria-label="Toggle Primary Menu"><svg><use xlink:href="assets/img/sprite.svg#hamburger"></use></svg></button>
+
+        <nav class="banner__nav" aria-label="Askham Bryan College Menu">
+            <div id="primary-menu">
+                <ul class="main-menu clicky-menu no-js no-bullet" >
+                    <li>
+                        <a href="#">
+                            Study
+                            <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                        </a>
+                        <div class="submenu submenu--wide">
+                            <div>
+                                <h2>Browse by level of study</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="#">16-19+</a></li>
+                                    <li><a href="#">Apprenticeships</a></li>
+                                    <li><a href="#">Higher Education</a></li>
+                                    <li><a href="#">Short courses & skills training</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>Browse by subject</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="department-landing.html">Agriculture</a></li>
+                                    <li><a href="department-landing.html">Animal Management</a></li>
+                                    <li><a href="department-landing.html">Arboriculture</a></li>
+                                    <li><a href="department-landing.html">Land and Wildlife</a></li>
+                                    <li><a href="department-landing.html">Engineering</a></li>
+                                    <li><a href="department-landing.html">Equine</a></li>
+                                    <li><a href="department-landing.html">Floristry</a></li>
+                                    <li><a href="department-landing.html">Horticulture</a></li>
+                                    <li><a href="department-landing.html">Motorsport</a></li>
+                                    <li><a href="department-landing.html">Outdoor Adventure Sport</a></li>
+                                    <li><a href="department-landing.html">Sport</a></li>
+                                    <li><a href="department-landing.html">Uniformed Public Services</a></li>
+                                    <li><a href="department-landing.html">Veterinary Nursing</a></li>
+                                    <li><a href="department-landing.html">Foundation Learning</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>Campuses</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="#">York</a></li>
+                                    <li><a href="#">Wakefield</a></li>
+                                    <li><a href="#">Middlesbrough</a></li>
+                                    <li><a href="#">Saltaire Centre</a></li>
+                                    <li><a href="#">Newcastle</a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="link-overview">Study Overview<svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#arrow-line-right"></use></svg></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Student Life
+                            <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                        </a>
+                        <div class="submenu submenu--wide">
+                            <div>
+                                <h2>Student Life</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="#">Student Experience</a></li>
+                                    <li><a href="#">Clubs & Societies</a></li>
+                                    <li><a href="#">Students Union</a></li>
+                                    <li><a href="#">Studying in York</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>Campuses</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="#">York</a></li>
+                                    <li><a href="#">Middlesbrough</a></li>
+                                    <li><a href="#">Newcastle</a></li>
+                                    <li><a href="#">Wakefield</a></li>
+                                    <li><a href="#">Saltaire Centre</a></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="link-overview">Student Life Overview<svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#arrow-line-right"></use></svg></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="apply.html">
+                            Apply
+                            <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                        </a>
+                        <div class="submenu submenu--wide">
+                            <div>
+                                <h2>Apply</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="apply.html">Apply now</a></li>
+                                    <li><a href="#">International Applications</a></li>
+                                    <li><a href="#">How to apply</a></li>
+                                    <li><a href="#">Applications Team</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="no-bullet">
+                                    <li><a href="#">Choosing your course</a></li>
+                                    <li><a href="#">Entry Requirements</a></li>
+                                    <li><a href="#">Making your application</a></li>
+                                    <li><a href="#">After you apply</a></li>
+                                </ul>
+                            </div>
+                            <a href="apply.html" class="link-overview">Apply now<svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#arrow-line-right"></use></svg></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            About
+                            <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                        </a>
+                        <div class="submenu submenu--wide">
+                            <div>
+                                <h2>About</h2>
+                                <ul class="no-bullet">
+                                    <li><a href="#">How we teach</a></li>
+                                    <li><a href="#">Our History</a></li>
+                                    <li><a href="#">Equality & Diversity</a></li>
+                                    <li><a href="#">Mission & Values</a></li>
+                                    <li><a href="#">Research</a></li>
+                                    <li><a href="#">News & Media</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul class="no-bullet">
+                                    <li><a href="#">Campuses</a></li>
+                                    <li><a href="#">Departments</a></li>
+                                    <li><a href="#">Staff Profiles</a></li>
+                                    <li><a href="#">Ofsted Reports</a></li>
+                                    <li><a href="#">Governance</a></li>
+                                    <li><a href="#">Wellbeing & Learning Support</a></li>
+                                    <li><a href="#">Quick Apply</a></li>
+                                    <li><a href="#">College Policies</a></li>
+                                    <li><a href="#">Complaints and Feedback</a></li>
+                                    <li><a href="#">Press and Media</a></li>
+                                </ul>
+                            </div>
+                            <a href="about.html" class="link-overview">About the College Overview<svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#arrow-line-right"></use></svg></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="main-menu main-menu--border clicky-menu no-js no-bullet">
+                    <li>
+                        <a href="#">
+                            Information for
+                            <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                        </a>
+                        <div class="submenu">
+                            <ul class="no-bullet">
+                                <li><a href="#">School leavers</a></li>
+                                <li><a href="#">University Centre study</a></li>
+                                <li><a href="#">Parents</a></li>
+                                <li><a href="#">Employers</a></li>
+                                <li><a href="#">Career Advisers</a></li>
+                                <li><a href="#">Current Students</a></li>
+                                <li><a href="#">Short Course & Commercial</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Discover
+                            <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                        </a>
+                        <div class="submenu">
+                            <ul class="no-bullet">
+                                <li><a href="#">Book an open event</a></li>
+                                <li><a href="#">Order a prospectus</a></li>
+                                <li><a href="course-search.html">Find a course</a></li>
+                                <li><a href="#">Ask a student</a></li>
+                                <li><a href="#">View a virtual tour</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="course-search.html">Courses</a>
+                    </li>
+                </ul>
+                <button class="button-hamburger" id="secondary-menu-toggle" aria-expanded="false" aria-label="Toggle secondary menu"><svg><use xlink:href="assets/img/sprite.svg#hamburger"></use></svg></button>
+                <div id="secondary-menu">
+                    <div class="secondary-menu__container">
+                        <ul class="main-menu clicky-menu no-js no-bullet">
+                            <li>
+                                <a href="open-days.html">
+                                    Whats On
+                                    <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="no-bullet">
+                                        <li><a href="open-days.html">Open Days</a></li>
+                                        <li><a href="open-days.html">Events</a></li>
+                                        <li><a href="open-days.html">Virtual Tours</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Campuses
+                                    <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="no-bullet">
+                                        <li><a href="#">York </a></li>
+                                        <li><a href="#">Middlesbrough</a></li>
+                                        <li><a href="#">Newcastle</a></li>
+                                        <li><a href="#">Wakefield</a></li>
+                                        <li><a href="#">Saltaire Centre</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Employers
+                                    <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="no-bullet">
+                                        <li><a href="#">Apprenticeships</a></li>
+                                        <li><a href="#">Employer Benefits</a></li>
+                                        <li><a href="#">Case Studies</a></li>
+                                        <li><a href="#">Grants & Funding</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Current Students
+                                    <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="no-bullet">
+                                        <li><a href="#">Courses</a></li>
+                                        <li><a href="#">Student Support</a></li>
+                                        <li><a href="#">Social Life</a></li>
+                                        <li><a href="#">Scholarships & Bursaries</a></li>
+                                        <li><a href="#">Career support</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="news-listing.html">
+                                    News & Media
+                                    <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="no-bullet">
+                                        <li><a href="news-all.html">News</a></li>
+                                        <li><a href="news-all.html">Blog</a></li>
+                                        <li><a href="news-all.html">Student Stories</a></li>
+                                        <li><a href="news-all.html">Photos</a></li>
+                                        <li><a href="news-all.html">Videos</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    College Information
+                                    <svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg>
+                                </a>
+                                <div class="submenu">
+                                    <ul class="no-bullet">
+                                        <li><a href="#">Online store</a></li>
+                                        <li><a href="#">Wildlife Park</a></li>
+                                        <li><a href="#">ETeach</a></li>
+                                        <li><a href="#">Moodle</a></li>
+                                        <li><a href="#">Covid 19 Response</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="secondary-menu__events show-for-xlarge">
+                            <h2 class="secondary-menu__title">Upcoming open days</h2>
+                            <div class="card-event">
+                                <div class="card-event__date">
+                                    <span class="card-event__day fw-b">29</span>
+                                    <span class="card-event__month display-6 fw-l"><span>Jun </span>2021</span>
+                                </div>
+                                <div class="card-event__text">
+                                    <h3 class="card-event__title"><a href="#">Higher Education Open Evening</a></h3>
+                                </div>
+                                <a href="#" class="button hollow">Book your place</a>
+                            </div>
+                            <div class="card-event">
+                                <div class="card-event__date">
+                                    <span class="card-event__day fw-b">29</span>
+                                    <span class="card-event__month display-6 fw-l"><span>Jun </span>2021</span>
+                                </div>
+                                <div class="card-event__text">
+                                    <h3 class="card-event__title"><a href="#">Higher Education Open Evening</a></h3>
+                                </div>
+                                <a href="#" class="button hollow">Book your place</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner__buttons">
+            <button class="button-search" id="search-toggle" aria-expanded="false" aria-label="Toggle site search"><svg><use xlink:href="assets/img/sprite.svg#icon-search"></use></svg></button>
+        </div>
+    </div>
+</header>
+<main id="content" class="">
+	<!--DEV Note
+		Option to have inverted 'invert'
+		Required - Title
+		Optional - small-intro, actions, intro
+		Course search only appears on course search page
+	-->
+	<section class="masthead">
+		<div class="masthead__inner inner">
+			<div class="masthead__text text-center">
+				<!-- Home + FE Landing - Title only -->
+	
+				<!-- Course Search - Title + Form -->
+				<h1 class="masthead__title display-9">
+					<span class="break">Find Your</span>  
+					<span class="break">Course</span> 
+				</h1>
+				<form>
+	                <label>
+	                    <span class="show-for-sr">Search course with keyword</span>
+	                    <input class="mb-0 submit-overlay border" type="text" placeholder="Search course with keyword">
+	                </label>
+	                <button class="submit-icon">
+	                    <span class="show-for-sr">Search</span>
+	                    <svg><use xlink:href="assets/img/sprite.svg#icon-search"></use></svg>
+	                </button>
+	            </form>
+	
+				<!-- Apply - Title + Text -->
+	
+				<!-- Open Days - Title + Text -->
+	
+				<!-- Open Days - Title + Text -->
+			</div>
+			<div class="masthead__image masthead__image--1">
+				<svg width="830" height="841" viewBox="0 0 830 841" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+					<clipPath id="masthead-clip-left">
+						<path d="M110.794 15.4241C76.7085 9.35992 39.4414 3.66519 1.2783 0.609344L0.320557 3.30737C39.707 15.7494 159.345 65.7525 250.565 221.476C361.877 409.852 279.87 789.818 820.616 840.403C822.425 839.546 958.888 161.581 110.794 15.4241Z"/>
+					</clipPath>
+					<image width="830" height="841" viewBox="0 0 830 841" preserveAspectRatio="xMidYMid slice" xlink:href="assets/img/masthead-image-1.jpg" />
+				</svg>
+			</div>
+			<div class="masthead__image masthead__image--2">
+				<svg width="444" height="580" viewBox="0 0 444 580" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+					<clipPath id="masthead-clip-top">
+						<path d="M4.89816 0C2.5881 13.834 1.17452 27.8973 0.744104 42.1758C-5.84281 261.573 160.022 465.514 225.647 546.203C239.605 563.365 249.028 574.951 251.293 579.925C441.844 475.33 453.103 196.785 439.445 0H4.89816Z"/>
+					</clipPath>
+					<image width="444" height="580" viewBox="0 0 444 580" preserveAspectRatio="xMidYMid slice" xlink:href="assets/img/masthead-image-2.jpg" />
+				</svg>
+			</div>
+			<div class="masthead__image masthead__image--3">
+				<svg width="1117" height="596" viewBox="0 0 1117 596" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+					<clipPath id="masthead-clip-bottom">
+						<path d="M0.304199 535.143C479.339 743.674 740.358 355.295 846.984 205.508C953.611 55.7205 1116.63 6.2677 1116.63 6.2677C221.484 -64.0289 0.338475 535.159 0.338475 535.159" fill="black"/>
+					</clipPath>
+					<image width="1117" height="596" viewBox="0 0 1117 596" preserveAspectRatio="xMidYMid slice" xlink:href="assets/img/masthead-image-3.jpg" />
+				</svg>
+			</div>
+			<!-- Home + FE Landing - Text + Buttons -->
+	
+			<!-- Course Search - Text only -->
+			<div class="masthead__intro">
+				<p class="display-1">Search through all of our courses to find what you're looking for. Our aim is to give you an outstanding time at university.</p>
+			</div>
+	
+			<!-- Apply - Buttons only -->
+	
+			<!-- Open Days - Buttons only -->
+		</div>
+	</section><div class="course-filters">
+		<div class="course-filters__inner inner">
+			<button type="button" class="filter-button course-filters__toggle button hide-for-xlarge" data-toggle="filters-container">Filter Results<svg><use xlink:href="assets/img/sprite.svg#icon-filter"></use></svg></button>
+			<div class="course-filters__controls off-canvas position-left reveal-for-xlarge" id="filters-container" data-off-canvas data-transition="overlap">
+				<button class="close-button hide-for-xlarge" aria-label="Close menu" type="button" data-close>
+					<span aria-hidden="true"><svg><use xlink:href="assets/img/sprite.svg#close"></use></svg></span>
+				</button>
+				<h2 class="course-filters__title t-upper show-for-xlarge">Filter results by:</h2>
+				<ul class="course-filters__facets no-bullet">
+					<li class="course-filters__item">
+						<button class="button button--dropdown" type="button" data-toggle="department-dropdown">Department<svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg></button>
+						<div class="dropdown-pane" id="department-dropdown" data-dropdown data-auto-focus="true">
+							<form>
+								<ul class="no-bullet">
+									<li><input id="checkbox12" type="checkbox"><label for="checkbox12">Checkbox 1</label></li>
+									<li><input id="checkbox22" type="checkbox"><label for="checkbox22">Checkbox 2</label></li>
+									<li><input id="checkbox32" type="checkbox"><label for="checkbox32">Checkbox 3</label></li>
+								</ul>
+							</form>
+						</div>
+					</li>
+					<li class="course-filters__item">
+						<button class="button button--dropdown" type="button" data-toggle="level-dropdown">Study Level<svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg></button>
+						<div class="dropdown-pane" id="level-dropdown" data-dropdown data-auto-focus="true">
+							<form>
+								<ul class="no-bullet">
+									<li><input id="checkbox42" type="checkbox"><label for="checkbox42">Checkbox 1</label></li>
+									<li><input id="checkbox52" type="checkbox"><label for="checkbox52">Checkbox 2</label></li>
+									<li><input id="checkbox62" type="checkbox"><label for="checkbox62">Checkbox 3</label></li>
+								</ul>
+							</form>
+						</div>
+					</li>
+					<li class="course-filters__item">
+						<button class="button button--dropdown" type="button" data-toggle="type-dropdown">Type<svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg></button>
+						<div class="dropdown-pane" id="type-dropdown" data-dropdown data-auto-focus="true">
+							<form>
+								<ul class="no-bullet">
+									<li><input id="checkbox72" type="checkbox"><label for="checkbox72">Checkbox 1</label></li>
+									<li><input id="checkbox82" type="checkbox"><label for="checkbox82">Checkbox 2</label></li>
+									<li><input id="checkbox92" type="checkbox"><label for="checkbox92">Checkbox 3</label></li>
+								</ul>
+							</form>
+						</div>
+					</li>
+					<li class="course-filters__item">
+						<button class="button button--dropdown" type="button" data-toggle="locations-dropdown">Locations<svg><use xlink:href="assets/img/sprite.svg#dropdown-arrow"></use></svg></button>
+						<div class="dropdown-pane" id="locations-dropdown" data-dropdown data-auto-focus="true">
+							<form>
+								<ul class="no-bullet">
+									<li><input id="checkbox102" type="checkbox"><label for="checkbox102">Checkbox 1</label></li>
+									<li><input id="checkbox112" type="checkbox"><label for="checkbox112">Checkbox 2</label></li>
+									<li><input id="checkbox122" type="checkbox"><label for="checkbox122">Checkbox 3</label></li>
+								</ul>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div><div class="inner">
+		<h2 class="show-for-sr">Course search results</h2>
+		<div class="listing-courses grid-x grid-margin-x medium-up-2">
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-1.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Agricultural Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-2.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Agriculture</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-3.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Conservation (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-4.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-5.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-6.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-7.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-8.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-9.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+			<div class="card-col cell scroll-fade-in" data-scroll>
+				<div class="card-col__image">
+					<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/course-search-ph-10.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+				</div>
+				<div class="card-col__text">
+					<h3 class="card-col__title display-2"><a href="#">BSc/BSc (Hons) Animal Management (Top Up)</a></h3>
+					<p class="card-col__desc">A ‘top up route’ to a BSc honours degree or BSc ordinary degree.</p>
+				</div>
+			</div>
+		</div>
+	</div> <!--DEV Note
+		Need to make sure aria label matches page number
+	-->
+	<div class="panel-m-1">
+		<div class="inner text-center">
+			<div class="pagination">
+				<a href="#" class="pagination__prev" aria-label="Go to previous page"><svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#arrow-left"></use></svg></a>
+				<ul class="pagination__pages no-bullet">
+					<li><a href="#" class="active" aria-label="Go to page 1"><span>1</span></a></li>
+					<li><a href="#" aria-label="Go to page 2"><span>2</span></a></li>
+					<li><a href="#" aria-label="Go to page 3"><span>3</span></a></li>
+					<li><a href="#" aria-label="Go to page 4"><span>4</span></a></li>
+					<li><a href="#" aria-label="Go to page 5"><span>5</span></a></li>
+				</ul>
+				<a href="#" class="pagination__next" aria-label="Go to next page"><svg aria-hidden="true"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg></a>
+			</div>
+		</div>
+	</div><section class="related-content panel-p-1">
+		<div class="related-content__inner inner">
+			<h2 class="related-content__title display-8">Also see</h2>
+			<div class="related-content__cards grid-x grid-margin-x medium-up-3">
+				<div class="card-text card-text--invert cell">
+					<h3 class="card-text__title"><a href="#">How to apply</a></h3>
+					<p class="display-2 card-text__desc">We are a specialist land-based provider developing talent.</p>
+				</div>
+				<div class="card-text card-text--invert cell">
+					<h3 class="card-text__title"><a href="#">Student Life</a></h3>
+					<p class="display-2 card-text__desc">We are a specialist land-based provider developing talent.</p>
+				</div>
+				<div class="card-text card-text--invert cell">
+					<h3 class="card-text__title"><a href="#">About the College</a></h3>
+					<p class="display-2 card-text__desc">We are a specialist land-based provider developing talent.</p>
+				</div>
+			</div>
+		</div>
+	</section><section class="panel-m-1 panel-flush">
+		<div class="inner">
+			<div class="section-header text-center scroll-fade-in" data-scroll>
+				<h2 class="section-header__title display-8">Experience life at college</h2>
+			</div>
+			<div class="card-group card-group--flush">
+				<div class="card card--overlay scroll-fade-in" data-scroll>
+					<div class="card__image">
+						<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/section-link-ph-1.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+					</div>
+					<div class="card__text">
+						<h3 class="card__title display-5"><a href="#">Student Support</a></h3>
+					</div>
+				</div>
+				<div class="card card--overlay scroll-fade-in" data-scroll>
+					<div class="card__image">
+						<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/section-link-ph-2.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+					</div>
+					<div class="card__text">
+						<h3 class="card__title display-5"><a href="#">View our open days</a></h3>
+					</div>
+				</div>
+				<div class="card card--overlay scroll-fade-in" data-scroll>
+					<div class="card__image">
+						<a href="#" aria-hidden="true" tabindex="-1"><img src="assets/img/section-link-ph-3.jpg" alt="Placeholder alt tag" loading="lazy"></a>
+					</div>
+					<div class="card__text">
+						<h3 class="card__title display-5"><a href="#">Explore our campuses</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	<div class="cookie-banner">
+	    <p>By using our website, you agree to our <a href="/cookie-policy">cookie policy</a></p>
+	    <button class="button">Accept</button>
+	</div></main>
+<footer class="site-footer">
+	<div class="site-footer__inner inner">
+		<div class="site-footer__grid grid-x grid-margin-x medium-up-2 large-up-5">
+			<div class="cell">
+				<ul class="no-bullet">
+					<li><a href="#">Study</a></li>
+					<li><a href="#">Open Days</a></li>
+					<li><a href="#">Student Life</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">News & Media</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div class="cell">
+				<h2>Browse by Audience</h2>
+				<ul class="no-bullet">
+					<li><a href="#">16-19</a></li>
+					<li><a href="#">19+</a></li>
+					<li><a href="#">Career Leaders</a></li>
+					<li><a href="#">Part-time and Commercial</a></li>
+					<li><a href="#">Higher Education</a></li>
+					<li><a href="#">Parent</a></li>
+					<li><a href="#">Employer</a></li>
+				</ul>
+			</div>
+			<div class="cell">
+				<h2>Student & Staff</h2>
+				<ul class="no-bullet">
+					<li><a href="#">Staff Moodle</a></li>
+					<li><a href="#">Student Moodle</a></li>
+				</ul>
+			</div>
+			<div class="cell">
+				<h2>Quick Links</h2>
+				<ul class="no-bullet">
+					<li><a href="#">Wildlife Park</a></li>
+					<li><a href="#">Online store</a></li>
+					<li><a href="#">Vacancies</a></li>
+					<li><a href="#">Covid 19 Response</a></li>
+				</ul>
+			</div>
+			<div class="cell">
+				<h2>Contact Us</h2>
+				<p>Askham Bryan College,<br/>
+				Askham Bryan, York,<br/>
+				YO23 3FR<br/>
+				01904 772277<br/>
+				<a href="#">enquiries@askham-bryan.ac.uk</a></p>
+			</div>
+		</div>
+		<div class="site-footer__misc">
+			<div class="site-footer__social social">
+				<h2 class="social__title">Follow us on social</h2>
+				<ul class="social__list no-bullet">
+					<li class="social__facebook"><a href="#" aria-label="Follow us on Facebook"><svg><use xlink:href="assets/img/sprite.svg#icon-facebook"></use></svg></a></li>
+					<li class="social__instagram"><a href="#" aria-label="Follow us on Instagram"><svg><use xlink:href="assets/img/sprite.svg#icon-instagram"></use></svg></a></li>
+					<li class="social__twitter"><a href="#" aria-label="Follow us on Twitter"><svg><use xlink:href="assets/img/sprite.svg#icon-twitter"></use></svg></a></li>
+					<li class="social__youtube"><a href="#" aria-label="Follow us on YouTube"><svg><use xlink:href="assets/img/sprite.svg#icon-youtube"></use></svg></a></li>
+				</ul>
+			</div>
+			<ul class="site-footer__links no-bullet">
+				<li><a href="#">Accessibility</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Cookies Policy</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="site-footer__logos">
+		<div class="site-footer__inner inner">
+			<ul class="no-bullet">
+				<li><img src="assets/img/logo-eu.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-landex.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-matrix.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-positive.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-stonewall.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-ofsted.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-york.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+				<li><img src="assets/img/logo-rural.jpg" alt="Placeholder alt tag" loading="lazy"></li>
+			</ul>
+		</div>
+	</div>
+</footer><div class="large reveal reveal--video" id="video-modal" data-reveal aria-labelledby="video-modal-header">
+    <h1 id="video-modal-header" class="show-for-sr">Askham Bryan College Video</h1>
+    <div class="reveal__content">
+        <div class="responsive-embed widescreen">
+            <iframe width="560" height="315" allowfullscreen title="Askham Bryan College Video"></iframe>
+        </div>
+    </div>
+    <button class="close-button" data-close type="button" aria-label="Close modal">
+        <span aria-hidden="true"><svg><use xlink:href="assets/img/sprite.svg#close"></use></svg></span>
+    </button>
+</div>
+<script src="assets/js/app.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+</body>
+</html>
